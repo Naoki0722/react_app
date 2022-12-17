@@ -17,7 +17,7 @@ services:
       - ./web:/myapp
       - gem_data:/usr/local/bundle
     ports:
-      - "3001:3000"
+      - "3000:3000"
     depends_on:
       - mysql
     stdin_open: true
