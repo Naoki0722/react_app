@@ -21,7 +21,7 @@
     "jsx": "react",
   },
   "include": [
-    "app/javascript/"
-    // "./.eslintrc.js",
+    "app/javascript/",
+    "./.eslintrc.js"
   ]
 }
