@@ -10,6 +10,7 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
   && mkdir /myapp
 
 RUN npm install --global yarn
+RUN yarn install --network-timeout 600000
 
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
