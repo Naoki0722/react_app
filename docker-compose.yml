@@ -12,12 +12,12 @@ services:
       - mysql-data:/var/lib/mysql
   web:
     build: ./web
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    command: /bin/sh -c "rm -f tmp/pids/server.pid && ./bin/dev"
     volumes:
       - ./web:/myapp
       - gem_data:/usr/local/bundle
     ports:
-      - "3001:3000"
+      - "3000:3000"
     depends_on:
       - mysql
     stdin_open: true
