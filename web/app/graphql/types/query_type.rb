@@ -18,10 +18,10 @@ module Types
     def test_field
       "Hello World!"
     end
-    
+
     # Then provide an implementation:
     def user(id:)
-      Useer.find(id)
+      User.find(id)
     end
   end
 end

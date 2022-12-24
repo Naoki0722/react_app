@@ -1,6 +1,7 @@
 import React from 'react';
-import { createBrowserRouter, Link } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 import Root from './Root';
+import Graphiql from './screens/Graphiql';
 import Home from './screens/Home';
 
 const router = createBrowserRouter([
@@ -13,13 +14,8 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/test',
-        element: (
-          <>
-            <p>testページ</p>
-            <Link to="/">HOMEに戻る</Link>
-          </>
-        ),
+        path: '/graphiql',
+        element: <Graphiql />,
       },
     ],
   },
