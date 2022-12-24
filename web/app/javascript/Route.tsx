@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Link } from 'react-router-dom';
 import Root from './Root';
 import Home from './screens/Home';
 
@@ -14,7 +14,12 @@ const router = createBrowserRouter([
       },
       {
         path: '/test',
-        element: <p>testページ</p>,
+        element: (
+          <>
+            <p>testページ</p>
+            <Link to="/">HOMEに戻る</Link>
+          </>
+        ),
       },
     ],
   },
