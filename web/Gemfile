@@ -61,3 +61,6 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# API Connect [https://graphql-ruby.org/]
+gem "graphql"

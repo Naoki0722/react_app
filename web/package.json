@@ -7,9 +7,13 @@
     "format": "yarn prettier --check 'app/javascript/**'"
   },
   "dependencies": {
+    "@graphiql/toolkit": "^0.8.0",
     "esbuild": "^0.16.8",
+    "graphiql": "^2.2.0",
+    "graphql": "^16.6.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.5.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

@@ -1,9 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-
-function App() {
-  return <h1>Hello World</h1>;
-}
+import { RouterProvider } from 'react-router-dom';
+import router from './Route';
 
 const root = document.querySelector('#root');
 if (!root) {
@@ -11,6 +9,6 @@ if (!root) {
 }
 createRoot(root).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
