@@ -64,4 +64,3 @@ end
 
 # API Connect [https://graphql-ruby.org/]
 gem "graphql"
-gem 'graphiql-rails'
