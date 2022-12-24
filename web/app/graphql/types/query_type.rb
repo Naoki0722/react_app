@@ -11,17 +11,27 @@ module Types
     field :test_field, String, null: false,
       description: "An example field added by the generator"
     # ユーザー情報取得
-    field :user, UserType, "Find a user by ID" do
+    field :user, React::UserType, "Find a user by ID" do
       argument :id, ID
     end
+
+    field :users, [React::UserType], description: 'all user'
 
     def test_field
       "Hello World!"
     end
 
-    # Then provide an implementation:
     def user(id:)
-      User.find(id)
+      begin
+        user = User.find(id)
+      rescue => exception
+        raise GraphQL::ExecutionError, "user info not found" unless !user.nil?
+      end
+      return user
+    end
+
+    def users
+      User.all
     end
   end
 end
